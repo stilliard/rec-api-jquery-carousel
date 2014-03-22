@@ -1,2 +1,32 @@
 
-.app-container {}
+.app-products-carousel-container {}
+.app-products-carousel-container ul { list-style: none; padding: 0; }
+
+.app-products-carousel-container li {
+    width: 200px;
+    position: relative;
+}
+.app-products-carousel-container img {
+    max-width: 100%;
+}
+
+.app-pc-item-default {}
+.app-pc-item-hover {
+    display:none;
+}
+.app-pc-item-hover strong,
+.app-pc-item-hover small {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+.app-pc-item-hover strong {
+    bottom: 30px;
+}
+.app-products-carousel-container li:hover .app-pc-item-default {
+    display: none;
+}
+.app-products-carousel-container li:hover .app-pc-item-hover {
+    display: block;
+}

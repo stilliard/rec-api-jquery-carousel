@@ -1,5 +1,32 @@
-(function ($) {
+jQuery(function ($) {
 
-    // 
+    // Set simple api connection details
+    REC_API.api_key = 'ad2db8a13818bb553753120f297663da58973087';
+    REC_API.domain = 'www.rec.dev';
 
-}(jQuery));
+    // Lookup products from given category
+    REC_API.request('/products', { 'fields': '*', 'category': '1' }).done(function (data) {
+
+        // setup end html
+        var html = '';
+
+        // loop products
+        $.each(data.products, function (i, product) {
+            html += '<li>\
+                <span class="app-pc-item-default">\
+                    <img src="'+ product.image +'">\
+                </span>\
+                <span class="app-pc-item-hover">\
+                    <img src="'+ product.additional_images[0].location +'">\
+                    <strong>'+ product.name +'</strong>\
+                    <small>View Details</small>\
+                </span>\
+            </li>';
+        });
+
+        // show end html
+        $('.app-products-carousel-container ul').html(html);
+
+    });
+
+});

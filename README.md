@@ -2,6 +2,10 @@
 Products carousel from an REC API
 ====================================
 
+Live demo
+-----------
+http://stapps.io/tests/rec-api-jquery-carousel/
+
 Local development
 ------------------
 Run this locally via a server that runs php for simplist workflow.

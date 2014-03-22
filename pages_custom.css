@@ -32,6 +32,7 @@
 /* app styling */
 .app-products-carousel-container {
     width: 600px; /* total container width = number of items * item width */
+    height: 300px;
 }
 .app-products-carousel-container ul {
     list-style: none;
@@ -41,9 +42,11 @@
 .app-products-carousel-container li {
     width: 200px; /* each item width */
     position: relative;
+    text-align: center;
 }
 .app-products-carousel-container img {
     max-width: 100%;
+    max-height: 100%;
 }
 
 .app-pc-item-default {}
@@ -56,6 +59,7 @@
     bottom: 10px;
     text-align: center;
     width: 100%;
+    left: 0;
 }
 .app-pc-item-hover strong {
     bottom: 30px;

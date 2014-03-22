@@ -2,11 +2,11 @@
 jQuery(function ($) {
 
     // Set simple api connection details
-    REC_API.api_key = 'ad2db8a13818bb553753120f297663da58973087';
-    REC_API.domain = 'www.rec.dev';
+    REC_API.api_key = '4f98745ccfa44ddd2c6794add9ea76332b76a1cb';
+    REC_API.domain = 'www.tustains.co.uk';
 
     // Lookup products from given category
-    REC_API.request('/products', { 'fields': '*', 'category': '1' }).done(function (data) {
+    REC_API.request('/products', { 'fields': '*', 'category': '29' }).done(function (data) {
 
         // setup end html
         var html = '';

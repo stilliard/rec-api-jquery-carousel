@@ -1,3 +1,4 @@
+// [[START APP]]
 jQuery(function ($) {
 
     // Set simple api connection details
@@ -24,9 +25,14 @@ jQuery(function ($) {
             </li>';
         });
 
-        // show end html
-        $('.app-products-carousel-container ul').html(html);
+        // show end html, and auto start carousel
+        $('.app-products-carousel-container ul').html(html).microfiche({
+            cyclic: true,
+            autoplay: 3,
+            autopause: true
+        });
 
     });
 
 });
+// [[END APP]]

@@ -18,7 +18,7 @@ jQuery(function ($) {
                     <img src="'+ product.image +'">\
                 </span>\
                 <span class="app-pc-item-hover">\
-                    <img src="'+ product.additional_images[0].location +'">\
+                    <img src="'+ (product.additional_images.length > 0 ? product.additional_images[0].location : product.image) +'">\
                     <strong>'+ product.name +'</strong>\
                     <small>View Details</small>\
                 </span>\

@@ -32,13 +32,13 @@ ini_set('display_errors', true);
             zoom: 1;
         }
     </style>
-    <link rel="stylesheet" href="/pages_custom.css">
+    <link rel="stylesheet" href="pages_custom.css">
 
     <!-- quick load in jquery, jquery ui, handlebars and the apps javascript -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script src="//rec.dev/js/jquery.fancybox-1.3.1.pack.js"></script>
-    <script src="/extra.js"></script>
+    <script src="extra.js"></script>
 </head>
 <body>
 

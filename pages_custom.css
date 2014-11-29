@@ -1,2 +1,73 @@
+/* 
+    RVS FEATURED SLIDER
+*/ 
 
-.app-container {}
+.rvs-featured-slider-container {
+    width: 570px;
+    border: 1px solid #CCC;
+    padding: 10px;
+}
+
+/* outer container */
+.rvs-product-container {
+    float: left;
+}
+
+/* image */
+.rvs-product-image-container {
+    display: block;
+    height: 175px;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+
+.rvs-product-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* attributes list */
+.rvs-product-attribute-container {
+    overflow: hidden;
+}
+.rvs-product-attribute-container,
+.rvs-product-attribute-container li {
+    list-style: none;
+}
+#content ul.rvs-product-attribute-container {
+    /* selector wars, beating RECs build in list padding */
+    padding: 0;
+}
+
+.rvs-product-attribute-container li {
+    padding: 8px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+.rvs-product-attribute-container li,
+.rvs-product-attribute-container a {
+    color: #FFF;
+}
+
+/* odd and even color attribute lines */
+.rvs-product-attribute-container li {
+    background: #4eb9dd;
+}
+.rvs-product-attribute-container li:nth-child(2n) {
+    background: #479ebc;
+}
+/* button to view product */
+.rvs-product-attribute-container li.rvs-product-call-to-action {
+    background: #4c5759;
+}
+
+/* position the banner canvas element */
+.banner-canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: hand;
+    cursor: pointer;
+}

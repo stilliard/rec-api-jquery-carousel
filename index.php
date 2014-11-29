@@ -34,15 +34,25 @@ ini_set('display_errors', true);
     </style>
     <link rel="stylesheet" href="/pages_custom.css">
 
-    <!-- quick load in jquery, jquery ui, handlebars and the apps javascript -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script src="//rec.dev/js/jquery.fancybox-1.3.1.pack.js"></script>
+    <!-- js libs -->
+    <script src="//ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js?load=builder,effects,controls,slider"></script>
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script>
+        // Create a different alias for jQuery, leaving $ for Prototype/Scriptaculus
+        var $j = jQuery.noConflict(),
+        jsMaster = {};
+    </script>
+    <script src="http://5.153.230.147/js/master-v103.js"></script>
     <script src="/extra.js"></script>
 </head>
 <body>
 
+    <div id="content">
     <?php /* Quick include the app */ require_once './example-page.html'; ?>
+    </div>
     
 </body>
 </html>

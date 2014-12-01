@@ -2,19 +2,24 @@
     RVS FEATURED SLIDER
 */ 
 
+#banner-slide.rvs-featured-slider-container,
 .rvs-featured-slider-container {
     width: 570px;
     border: 1px solid #CCC;
     padding: 10px;
 }
+#content .rvs-featured-slider-container > ul {
+    /* selector wars, beating RECs build in list styliing */
+    padding: 0;
+    list-style: none;
+}
 
 /* outer container */
-.rvs-product-container {
-    float: left;
+.rvs-featured-slider-product-container {
 }
 
 /* image */
-.rvs-product-image-container {
+.rvs-featured-slider-product-image-container {
     display: block;
     height: 175px;
     text-align: center;
@@ -22,44 +27,44 @@
     float: left;
 }
 
-.rvs-product-image {
+.rvs-featured-slider-product-image {
     max-width: 100%;
     max-height: 100%;
 }
 
 /* attributes list */
-.rvs-product-attribute-container {
+.rvs-featured-slider-product-attribute-container {
     overflow: hidden;
 }
-.rvs-product-attribute-container,
-.rvs-product-attribute-container li {
+.rvs-featured-slider-product-attribute-container,
+.rvs-featured-slider-product-attribute-container li {
     list-style: none;
 }
-#content ul.rvs-product-attribute-container {
+#content ul.rvs-featured-slider-product-attribute-container {
     /* selector wars, beating RECs build in list padding */
     padding: 0;
 }
 
-.rvs-product-attribute-container li {
+.rvs-featured-slider-product-attribute-container li {
     padding: 8px 10px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 15px;
 }
-.rvs-product-attribute-container li,
-.rvs-product-attribute-container a {
+.rvs-featured-slider-product-attribute-container li,
+.rvs-featured-slider-product-attribute-container a {
     color: #FFF;
 }
 
 /* odd and even color attribute lines */
-.rvs-product-attribute-container li {
+.rvs-featured-slider-product-attribute-container li {
     background: #4eb9dd;
 }
-.rvs-product-attribute-container li:nth-child(2n) {
+.rvs-featured-slider-product-attribute-container li:nth-child(2n) {
     background: #479ebc;
 }
 /* button to view product */
-.rvs-product-attribute-container li.rvs-product-call-to-action {
+.rvs-featured-slider-product-attribute-container li.rvs-featured-slider-product-call-to-action {
     background: #4c5759;
 }
 

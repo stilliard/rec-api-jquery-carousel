@@ -52,7 +52,7 @@
         REC_API.domain = '5.153.230.147';
 
         // Lookup products from given category
-        REC_API.request('/products', { 'fields': '*' }).done(function (data) {
+        REC_API.request('/products', { 'fields': '*', 'limit': '5' }).done(function (data) {
 
             // setup end html
             var html = '';
@@ -60,24 +60,24 @@
             // loop products
             $.each(data.products, function (i, product) {
 
-                html += '<li class="rvs-product-container">\
+                html += '<li class="rvs-featured-slider-product-container">\
                     <!-- image (inc banner) -->\
-                    <a class="rvs-product-image-container" href="'+ product.link +'">\
-                        <img class="rvs-product-image" title="View product" alt="'+ product.name +'" src="'+ product.image +'" />\
+                    <a class="rvs-featured-slider-product-image-container" href="'+ product.link +'">\
+                        <img class="rvs-featured-slider-product-image" title="View product" alt="'+ product.name +'" src="'+ product.image +'" />\
                         <!-- banner canvas -->\
                         <canvas width="120" height="120" id="banner_canvas_'+ product.id +'" class="banner-canvas"></canvas>\
                     </a>\
                     <!-- Attribute lists -->\
-                    <ul class="rvs-product-attribute-container">\
+                    <ul class="rvs-featured-slider-product-attribute-container">\
                 ';
                 $.each(product.attributes, function (j, attr) {
                     html += '\
-                        <li class="rvs-product-attribute">\
+                        <li class="rvs-featured-slider-product-attribute">\
                         '+ attr.value +'\
                         </li>';
                 });
                 html += '\
-                        <li class="rvs-product-call-to-action">\
+                        <li class="rvs-featured-slider-product-call-to-action">\
                             <a href="'+ product.link +'">Click here for more information</a>\
                         </li>\
                     </ul>\
@@ -91,6 +91,15 @@
             // loop products again to init the banner
             $.each(data.products, function (i, product) {
                 showBanner(product.id);
+            });
+
+            // init slider
+            $('#banner-slide').bjqs({
+                animtype      : 'slide',
+                height        : 175,
+                width         : 545,
+                responsive    : false,
+                randomstart   : true
             });
 
         });

@@ -57,13 +57,18 @@
         REC_API.domain = '5.153.230.147';
 
         // Lookup products from given category
-        REC_API.request('/products', { 'fields': '*', 'limit': '5' }).done(function (data) {
+        REC_API.request('/products', { 'fields': '*', 'category': '1', 'limit': '100' }).done(function (data) {
 
             // setup end html
             var html = '';
 
+            // filter to just featured products
+            var products = $.grep(data.products, function (p) {
+                return p.status == 'featured';
+            });
+
             // loop products
-            $.each(data.products, function (i, product) {
+            $.each(products, function (i, product) {
 
                 html += '<li class="rvs-featured-slider-product-container">\
                     <!-- image (inc banner) -->\
@@ -94,7 +99,7 @@
             $('.rvs-featured-slider-container ul').html(html);
 
             // loop products again to init the banner
-            $.each(data.products, function (i, product) {
+            $.each(products, function (i, product) {
                 showBanner(product.id);
             });
 

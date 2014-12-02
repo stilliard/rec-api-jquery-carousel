@@ -3,6 +3,11 @@
 // 
 /*jshint multistr: true */
 (function ($) {
+    
+    // make sure the following code only executes on the homepage
+    if ( ! $('body').hasClass('rec-body-home')) {
+        return;
+    }
 
     // 
     // Banner canvas code

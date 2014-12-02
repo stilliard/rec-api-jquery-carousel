@@ -3,11 +3,6 @@
 // 
 /*jshint multistr: true */
 (function ($) {
-    
-    // make sure the following code only executes on the homepage
-    if ( ! $('body').hasClass('rec-body-home')) {
-        return;
-    }
 
     // 
     // Banner canvas code
@@ -51,6 +46,11 @@
     // init app on dom ready
     // 
     $(document).ready(function() {
+    
+        // make sure the following code only executes on the homepage
+        if ( ! $('body').hasClass('rec-body-home') || ! REC_API) {
+            return;
+        }
         
         // Set simple api connection details
         REC_API.api_key = '11a10d6beeca28e429de1f44f35cf8eeaa81e80a';
